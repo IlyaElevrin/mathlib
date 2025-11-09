@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathLib - Lectures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MathLib</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="books.html" class="nav-link" data-i18n="nav.books">Books</a>
+                <a href="lectures.html" class="nav-link active" data-i18n="nav.lectures">Lectures</a>
+                <a href="articles.html" class="nav-link" data-i18n="nav.articles">Articles</a>
+            </div>
+            <div class="language-selector">
+                <div class="lang-dropdown">
+                    <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+                        <span class="lang-text">EN</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown-content" id="lang-dropdown">
+                        <a href="#" onclick="setLanguage('en'); return false;">English (EN)</a>
+                        <a href="#" onclick="setLanguage('de'); return false;">Deutsch (DE)</a>
+                        <a href="#" onclick="setLanguage('ru'); return false;">Русский (RU)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" data-i18n-placeholder="search.placeholder" placeholder="Search...">
+        </div>
+        <h1 class="page-title" data-i18n="pages.lectures">Lectures</h1>
+        <div id="content-grid" class="content-grid"></div>
+        <div id="no-results" class="no-results" style="display: none;" data-i18n="search.noResults">No results found</div>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="lectures.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', translatePage);
+    </script>
+</body>
+</html>
+

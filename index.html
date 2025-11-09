@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathLib - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MathLib</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
+                <a href="books.html" class="nav-link" data-i18n="nav.books">Books</a>
+                <a href="lectures.html" class="nav-link" data-i18n="nav.lectures">Lectures</a>
+                <a href="articles.html" class="nav-link" data-i18n="nav.articles">Articles</a>
+            </div>
+            <div class="language-selector">
+                <div class="lang-dropdown">
+                    <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+                        <span class="lang-text">EN</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown-content" id="lang-dropdown">
+                        <a href="#" onclick="setLanguage('en'); return false;">English (EN)</a>
+                        <a href="#" onclick="setLanguage('de'); return false;">Deutsch (DE)</a>
+                        <a href="#" onclick="setLanguage('ru'); return false;">Русский (RU)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="hero-section">
+            <h1 class="hero-title">MathLib</h1>
+            <p class="hero-subtitle" data-i18n="home.subtitle">Mathematical Materials Library</p>
+        </div>
+
+        <div id="formulas-background" class="formulas-background"></div>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', translatePage);
+    </script>
+</body>
+</html>
+
